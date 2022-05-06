@@ -146,6 +146,36 @@ extension WidgetChainExtension on Widget {
   }
 
   ///
+  /// 设置四周的间距
+  ///
+  Padding only({
+    Key? key,
+    required double top,
+    required double right,
+    required double bottom,
+    required double left,
+  }) {
+    return intoPadding(
+      padding:
+          EdgeInsets.only(left: left, right: right, top: top, bottom: bottom),
+    );
+  }
+
+  ///
+  /// 设置竖直间距
+  ///
+  Padding paddingVertical({Key? key, required double vertical}) {
+    return intoPadding(padding: EdgeInsets.symmetric(vertical: vertical));
+  }
+
+  ///
+  /// 设置水平间距
+  ///
+  Padding paddingHorizontal({Key? key, required double horizontal}) {
+    return intoPadding(padding: EdgeInsets.symmetric(horizontal: horizontal));
+  }
+
+  ///
   /// 插入Positioned控件
   ///
   Positioned intoPositioned({
