@@ -120,28 +120,28 @@ extension WidgetChainExtension on Widget {
   ///
   /// 设置左边间距
   ///
-  Padding paddingLeft({Key? key, required double left}) {
+  Padding paddingLeft(double left) {
     return intoPadding(padding: EdgeInsets.only(left: left));
   }
 
   ///
   /// 设置右边间距
   ///
-  Padding paddingRight({Key? key, required double right}) {
+  Padding paddingRight(double right) {
     return intoPadding(padding: EdgeInsets.only(right: right));
   }
 
   ///
   /// 设置上面间距
   ///
-  Padding paddingTop({Key? key, required double top}) {
+  Padding paddingTop(double top) {
     return intoPadding(padding: EdgeInsets.only(top: top));
   }
 
   ///
   /// 设置下面间距
   ///
-  Padding paddingBottom({Key? key, required double bottom}) {
+  Padding paddingBottom(double bottom) {
     return intoPadding(padding: EdgeInsets.only(bottom: bottom));
   }
 
@@ -149,11 +149,10 @@ extension WidgetChainExtension on Widget {
   /// 设置四周的间距
   ///
   Padding only({
-    Key? key,
-    required double top,
-    required double right,
-    required double bottom,
-    required double left,
+    double top = 0,
+    double right = 0,
+    double bottom = 0,
+    double left = 0,
   }) {
     return intoPadding(
       padding:
@@ -164,14 +163,14 @@ extension WidgetChainExtension on Widget {
   ///
   /// 设置竖直间距
   ///
-  Padding paddingVertical({Key? key, required double vertical}) {
+  Padding paddingVertical(double vertical) {
     return intoPadding(padding: EdgeInsets.symmetric(vertical: vertical));
   }
 
   ///
   /// 设置水平间距
   ///
-  Padding paddingHorizontal({Key? key, required double horizontal}) {
+  Padding paddingHorizontal(double horizontal) {
     return intoPadding(padding: EdgeInsets.symmetric(horizontal: horizontal));
   }
 
